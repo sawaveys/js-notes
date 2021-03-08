@@ -206,3 +206,29 @@ function functionWithArgs(a, b) {
 }
 functionWithArgs(1, 2)
     //when we call this arguement functionWithArgs (1,2) we should get a value of 3
+
+
+//scope refers to the visibility of variables 
+// variables defined outside of a function block have global scope
+//global scope means the can be seen everywhere in your javascript code
+// for example 
+var myGlobal = 10;
+//this variable can be indentified in the function below
+function fun1() {
+    oopsGlobal = 5
+}
+
+function fun2() {
+    var output = "";
+    if (typeof myGlobal != "undefined")
+        output += "myGlobal: " + myGlobal;
+}
+if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+}
+}
+//normally using a var keyword inside a function scopes that varible to that function
+//which means it wont be recognisable in other function
+//for example if the oopsGlobal had been attached to a varible inside the function 
+//then it would show as undefined in the fun2 function
+//not assigning the var inside a function makes it global scope automatically
