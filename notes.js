@@ -232,3 +232,53 @@ if (typeof oopsGlobal != "undefined") {
 //for example if the oopsGlobal had been attached to a varible inside the function 
 //then it would show as undefined in the fun2 function
 //not assigning the var inside a function makes it global scope automatically
+
+//its possible to have global and local scopes with the same name
+//for example
+var someVar = "Hat";
+
+function myFun() {
+    var someVar = "Head";
+    return someVar;
+}
+//when this is done local variables take precedence over global variables
+//so the example will return string Head because there's a local version of the varible present
+
+//in a function with arguments the return statement can be used to send a value back from a function for example 
+function plusThree(num) {
+    return num + 3;
+}
+var answer = plusThree(5);
+// plusThree took the argument for num and returnt the answer 8 (num+3)
+
+
+// we can take return values of functions and assign it to variables 
+// for example 
+//Assume we have pre-defined a function sum which adds two numbers together, then:
+ourSum = sum(5, 12);
+// this will call the sum function which means ourSum is 17
+
+// if you reassign a global varible to the return value of a function it should work 
+//for example
+var processed = 0;
+
+function processArg(num) {
+    return (num + 3) / 5;
+}
+// processed is already defined as 0
+
+// if we call 
+processed = processArg(7)
+    // the return value for processed is 2 rather than 0
+
+
+//a queue is an abstract data sctructure where items are kept in order
+// new items can be added at the back of the queue and old taken off the front
+function nextInLine(arr, item) {
+
+    arr.push(item)
+    return arr.shift();
+}
+var testArr = [1, 2, 3, 4, 5];
+//before the function the array was [1,2,3,4,5]
+//after the function the array became [2,3,4,5,6]
