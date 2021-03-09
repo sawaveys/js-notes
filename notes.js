@@ -295,4 +295,10 @@ var testArr = [1, 2, 3, 4, 5];
 // best practice to use a descriptive name for an iterator variable
 
 // for loop contains three expressions seperatred by ;
-//1. an initialisation
+//1. an initialisation starts the loop and can also be used to declare the iterator variable
+
+//2. a stopping condition is the condition that the iterator variable is evaluated against  if
+// the condition evaluates to true the code will block will run and if it evaluates to false 
+// the code will stop
+
+//3.
