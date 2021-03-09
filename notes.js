@@ -282,3 +282,17 @@ function nextInLine(arr, item) {
 var testArr = [1, 2, 3, 4, 5];
 //before the function the array was [1,2,3,4,5]
 //after the function the array became [2,3,4,5,6]
+
+//a loop is a programming tool that repeats a set of instructions until a specfied condition
+//the specified condition is called a stopping condition
+//for loop
+//instead of writing the same code over and over, loops allow us to tell the computer
+//to repeat a block of code on its own.
+//a for loops includes an iterator variable that appears in all 3 expressions 
+//iterator varible is initalised
+//checked against the stopping condition
+// and assigned a new value on each loop iteration
+// best practice to use a descriptive name for an iterator variable
+
+// for loop contains three expressions seperatred by ;
+//1. an initialisation
